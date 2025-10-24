@@ -1,0 +1,15 @@
+{
+  "name": "pncode",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "pngjs": "^7.0.0"
+  },
+  "scripts": {
+    "bin": "node test/usage.js",
+    "test": "node test/usage.js compress _in _out.png && node test/usage.js extract _out.png _out"
+  },
+  "author": "tsumugi_dev"
+}
