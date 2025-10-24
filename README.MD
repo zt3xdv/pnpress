@@ -5,7 +5,9 @@ A library to compress files using png codec.
 
 Compress:
 ```js
-# File name/path needs to be relative to folder.
+import { encode } from "pnpress";
+
+// File name/path needs to be relative to folder.
 const files = [{ name: "hello.txt", data: "Hello World! (Buffer)" }, ...];
 const pngBuffer = encode(files);
 await fs.writeFile("out.png", pngBuffer);
@@ -13,6 +15,8 @@ await fs.writeFile("out.png", pngBuffer);
 
 Decompress:
 ```js
+import { decode } from "pnpress";
+
 const files = decode(pngBuf);
 for (const f of files) {
   const outPath = path.join("./out", f.name);
